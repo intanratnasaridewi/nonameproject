@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
-from sqlalchemy import create_engine
 from library import  BarChart, DonutChart2, LineChart, PieChart, HorizontalBarChart, GanttChart, ChatCard, DashboardCard, DashboardCardNoDelta, HorizontalBarChartWithLine
 import folium
 from streamlit_folium import st_folium
