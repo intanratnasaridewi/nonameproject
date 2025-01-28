@@ -40,9 +40,6 @@ st.markdown(
 )
  
 
-engine = create_engine(
-    "postgresql+psycopg2://postgres:intan271001@localhost:5432/db_pegawai"
-)
 
 
 def fetch_data(file_name):
