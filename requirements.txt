@@ -1,7 +1,5 @@
 streamlit==1.24.0
 pandas==2.1.1
-sqlalchemy==2.0.21
-psycopg2-binary==2.9.8
 plotly==5.16.1
 folium==0.14.0
 streamlit-folium==0.12.0
