@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-from sqlalchemy import create_engine
 from library import  BarChart,  LineChart, PieChart, HorizontalBarChart, GanttChart,  DashboardCard,  ChatCard, DonutChart
 import plotly.figure_factory as ff
 import folium
