@@ -427,7 +427,25 @@ with st.container():
         selected_year = st.selectbox('pilih tahun',years_available)
 
         df_filtered_month = filter_data_by_year(filtered_data_aset, 'datetime', selected_year)
-        df_filtered_month["bulan"] = df_filtered_month["datetime"].dt.month_name(locale='id') 
+        bulan_dict = {
+            "January": "Januari",
+            "February": "Februari",
+            "March": "Maret",
+            "April": "April",
+            "May": "Mei",
+            "June": "Juni",
+            "July": "Juli",
+            "August": "Agustus",
+            "September": "September",
+            "October": "Oktober",
+            "November": "November",
+            "December": "Desember",
+        }
+
+        # Tambahkan kolom nama bulan
+        df_filtered_month["bulan"] = (
+            df_filtered_month["datetime"].dt.strftime("%B").map(bulan_dict)
+        )
         total_biaya_per_tahun = df_filtered_month.groupby(["bulan", "name_of_dept"])["cost"].sum().reset_index(name="total_biaya")
         total_biaya= BarChart(
             total_biaya_per_tahun,
